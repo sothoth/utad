@@ -1,0 +1,15 @@
+sut:
+
+  build: .
+  links:
+    - "web"
+  command: ./tests.sh
+
+web:
+  build: .
+  links:
+    - "redis:redis"
+  ports:
+    - "80:80"
+redis:
+  image: redis
