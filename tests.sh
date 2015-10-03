@@ -14,7 +14,7 @@ fi
 
 if curl http://${WEB_IP}:80 | grep -q '<b>Visits:</b> '; then
   echo "Tests passed!"
-  exit 1
+  exit 0
 fi
 
 echo "Integration tests failed!"
